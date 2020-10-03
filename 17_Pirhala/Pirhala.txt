@@ -1,0 +1,7 @@
+1. Select kvety.nazov,kvety.vyska_do from druhy_kvetov JOIN kvety ON druhy_kvetov.id=kvety.druh where druhy_kvetov.nazov LIKE "%Ruže%"
+2. SELECT stanovisko.nazov FROM stanovisko where stanovisko.id NOT IN (SELECT kvety_stanovisko.id_stanovisko from kvety_stanovisko)
+3.	INSERT INTO druhy_kvetov (id, nazov) VALUES (10, "Begónia");
+	INSERT INTO kvety (id, nazov, cena, obsah_balenia, druh, vyska_od, vyska_do) VALUES (9, "Begonia Pendula MIX", 5.50, 5, 10, 0, 40);
+	INSERT INTO kvety_stanovisko (id, id_kvety, id_stanovisko) VALUES (12, 9, 2);
+4.SELECT kvety.nazov, COUNT(*) AS "pocet stanovisk"  FROM kvety JOIN kvety_stanovisko on kvety_stanovisko.id_kvety=kvety.id GROUP BY kvety.id
+5.
